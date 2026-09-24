@@ -200,3 +200,7 @@ open -e "$HOME/Library/Application Support/net-login/config.ini"
 sudo ./install.sh --uninstall --system   # 系统级
 ```
 配置文件会保留，需要可自行删除。
+
+## 许可
+
+MIT License，见 `LICENSE`。
