@@ -21,6 +21,7 @@
 ## 三步搞定
 
 ```bash
+git clone https://github.com/bluecobaltum/net-login.git
 cd net-login
 ./install.sh                 # 安装（用户级，不需要 sudo）
 nano ~/.config/net-login/config.ini   # 填 username（学号）和 password
@@ -34,6 +35,9 @@ journalctl --user -u netlogin -f
 ```
 
 `config.ini` 每轮检查都会重新读取，改完立即生效，不用重启服务。
+
+> 校园网内 `github.com` 的 443 端口常被拦截，克隆不下来时可以走 SSH：
+> `git clone git@github.com:bluecobaltum/net-login.git`
 
 ## 适用网络
 
