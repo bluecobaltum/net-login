@@ -1,0 +1,7 @@
+# 真实账号密码配置(安装后由模板生成, 不要提交)
+config.ini
+# 日志与缓存
+*.log
+__pycache__/
+*.pyc
+.DS_Store

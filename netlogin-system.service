@@ -1,0 +1,15 @@
+[Unit]
+Description=Campus network auto login (Dr.COM eportal)
+After=network-online.target NetworkManager-wait-online.service
+Wants=network-online.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+ExecStart=@BIN@ @CONFIG_ARGS@watch
+Restart=always
+RestartSec=20
+KillSignal=SIGINT
+
+[Install]
+WantedBy=multi-user.target

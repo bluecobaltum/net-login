@@ -1,0 +1,13 @@
+[Unit]
+Description=Campus network auto login (Dr.COM eportal)
+
+[Service]
+Type=simple
+ExecStart=@BIN@ @CONFIG_ARGS@watch
+Restart=always
+RestartSec=20
+# 网络就绪前登录会失败, 脚本自身会重试, 所以这里直接常驻
+KillSignal=SIGINT
+
+[Install]
+WantedBy=default.target
